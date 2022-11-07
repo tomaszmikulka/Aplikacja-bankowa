@@ -18,5 +18,33 @@ public class Account {
         this.balance = balance;
         this.pin = pin;
     }
+    public String getLogin() {
+        return login;
+    }
+    public int getPin() {
+        return pin;
+    }
+    public String getAccount_number(){
+        return account_number;
+    }
+    public double withdraw(double cashToGet){
+        return balance = balance - cashToGet;
+    }
+    public double getBalance(){
+        return balance;
+    }
+    public  double deposit(double cashToPut){
+        return balance = balance + cashToPut;
+    }
+    public double credit(double moneyToRent){
+        double maxCredit = 0.1 * balance;
+        if (moneyToRent < maxCredit) {
+            return balance = balance + moneyToRent;
+        }
+        else {
+            System.out.println("Nie możemy udzielić Ci tak wysokiego kredytu.");
+            return balance;
+        }
+    }
 }
 
