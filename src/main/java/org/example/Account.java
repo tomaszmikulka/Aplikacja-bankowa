@@ -18,6 +18,11 @@ public class Account {
         this.balance = balance;
         this.pin = pin;
     }
+
+    public Account() {
+
+    }
+
     public String getLogin() {
         return login;
     }
@@ -30,8 +35,10 @@ public class Account {
     public double withdraw(double cashToGet){
         return balance = balance - cashToGet;
     }
-    public double getBalance(){
-        return balance;
+    //public double getBalance(){
+    //    return (long) balance;
+    public long getBalance(){
+        return (long) balance;
     }
     public  double deposit(double cashToPut){
         return balance = balance + cashToPut;
@@ -45,6 +52,9 @@ public class Account {
             System.out.println("Nie możemy udzielić Ci tak wysokiego kredytu.");
             return balance;
         }
+    }
+    public double setBalance(int i) {
+        return balance = i + balance;
     }
 }
 
